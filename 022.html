@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 022</title>
+    <style>
+
+        *{ margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        header{ background-color: #333333;
+            color: white;
+            
+
+        }
+
+        header > p  { padding-bottom: 30px;
+            font-style: italic; 
+            font-size: 20px;
+
+        }
+
+        header > h2 { padding-bottom: 10px;
+            font-size: 35px;
+
+        }
+
+        header h2, header p { text-align: center;
+
+        }
+
+        header > h1 {  padding-bottom: 70px;
+                       margin-left: 40px;
+                       transform: skewY(-5deg);
+                       text-shadow: 2px 2px 2px black;
+
+        }
+
+        nav {  background-color: #444444;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        nav > a { padding: 8px 20px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            
+
+        }
+
+        .home {  background-color: #FF6600;
+                 padding: 8px 20px;
+                 border-radius: 5px;
+
+        }
+
+        nav > a:hover { background-color: #666666;
+            padding: 8px 20px;
+            border-radius: 5px;
+
+        }
+
+        
+
+        body { background-color: #F5F5F5;
+
+        }
+
+        main { display: grid;
+            grid-template-columns: repeat(3 , 1fr );
+            margin: auto;
+            max-width: 800px;
+            min-width: 400px;
+            
+
+        }
+
+        .linha1 {  margin: 20px;
+
+        }
+
+        .linha2 { margin: 20px;
+
+        }
+
+        .linha3 { margin: 20px;
+
+        }
+
+        .caixa1 { margin-bottom: 20px;
+
+        }
+
+        .caixa1 > p { margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa2 { margin-bottom: 20px;
+
+        }
+
+        .caixa2 > p { margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa3 { margin-bottom: 20px;
+
+        }
+
+        .caixa3 > p {  margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa4 { margin-bottom: 20px;
+
+        }
+
+        .caixa4 > p{  margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa5 { margin-bottom: 20px;
+
+        }
+
+        .caixa5 > p {  margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa6 { margin-bottom: 20px;
+
+        }
+
+        .caixa6 > p {  margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa7 {  margin-bottom: 20px;
+
+        }
+
+        .caixa7 > p {  margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa8 { margin-bottom: 20px;
+
+        }
+
+        .caixa8 > p {  margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .caixa9 > p {  margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        
+
+
+
+        .card { border: 1px solid;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+        }
+
+        .card > p { text-align: justify;
+
+        }
+
+        .card {   display: flex;
+                 flex-direction: column;
+                                 
+
+        }
+
+        .card:hover { box-shadow: 1px 3px 3px #00000063;
+            transition-duration: 0.5s;
+
+        }
+
+        button { background-color: #45A049;
+            color: white;
+            padding-bottom: 5px;
+            padding-top: 5px;
+           border: 0px;
+           border-radius: 5px;
+
+
+        }
+
+        button:hover { background-color: #38863b;
+            transition-duration: 0.5s;
+
+        }
+
+        footer { background-color: #333333;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            
+
+        }
+
+        footer > a { background-color: rgb(241, 223, 223);
+            border-radius: 5px;
+
+        }
+
+        footer > a { padding: 10px;
+            color: rgb(182, 14, 14);
+            text-decoration: none;
+
+        }
+
+        footer a:hover { background-color: rgba(238, 191, 191, 0.683);
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>       
+        <header>
+                 <h1>SuperShop</h1>
+                 <h2>Online Shop</h2>
+                 <p>Quality products at affordable prices</p>
+
+        </header>
+
+        <nav>
+          <a  class ="home" href="http://">Home</a>
+          <a href="http://">Products</a>
+          <a href="http://">Categories</a>
+          <a href="http://">About</a>
+          <a href="http://">Contact</a>
+          
+        </nav>
+
+                <main class="gridconteiner">
+
+                    <div class ="linha1">
+
+                        <div class= " card caixa1">
+
+                            <h3>Smartphone</h3>
+
+                            <p>Latest smartphone with advanced features and long battery life.</p>
+
+                            <button>add to cart</button>
+
+
+                        </div>
+
+                        <div class =" card caixa2">
+
+                            <h3>Laptop</h3>
+
+                            <p>Ultra-thin laptop with high performance and lightweight design.</p>
+
+                            <button>add to cart</button>
+
+
+                        </div>
+
+                        <div class =" card caixa3">
+
+                            <h3>Headphones</h3>
+
+                            <p>Premium noise-canceling headphones with crystal clear sound.</p>
+
+
+                            <button>add to cart</button>
+
+                        </div>
+
+                    </div>
+
+                        <div class ="linha2">
+
+                           <div class =" card caixa4">
+                           
+                            <h3>Smart Watch</h3>
+
+                            <p>Track your fitness and stay connected with this smart watch.</p>
+
+                            <button>add to cart</button>
+                            
+                           </div>
+                    
+                           <div class =" card caixa5">
+
+                            <h3>Camera </h3> 
+
+                            <p>Professional DSLR camera perfect for photography enthusiasts.</p>
+
+                            <button>add to cart</button>
+
+                           </div>
+
+                           <div class=" card caixa6">
+
+                            <h3>Tablet</h3>
+
+                            <p>10-inch tablet with stylus support 
+                                and long battery life. </p>
+
+                                <button>add to cart</button>
+
+
+                           </div>
+                    
+                    
+                        </div>
+
+                        <div class ="linha3">
+
+                            <div class=" card caixa7">
+
+                            <h3>Gaming Console</h3>
+
+                            <p>Next-gen gaming console with 4K support and immersive gaming.</p>
+
+
+                            <button>add to cart</button>
+
+                            </div>
+
+                            <div class=" card caixa8">
+
+                                <h3>Wireless Earbuds</h3>
+
+
+                                <p>True wireless earbuds with premium sound and noise cancellation.</p>
+
+
+                                <button>add to cart</button>
+
+
+                            </div>
+
+                            <div class=" card caixa9">
+
+                                <h3>External SSD</h3>
+
+                                <p>High-speed portable SSD with rugged design and water resistance.</p>
+
+
+                                <button>add to cart</button>
+
+
+
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+                </main>
+
+
+
+                 <footer>
+                      <a href="http://">Home</a>
+                      <a href="http://">Products</a>
+                      <a href="http://">Categories</a>
+                      <a href="http://">About</a>
+                      <a href="http://">Contact</a>
+                      <a href="http://">Shipping</a>
+                      <a href="http://">Returns</a>
+                      <a href="http://">Privacy</a>
+                      <a href="http://">Terms</a>
+                      <a href="http://">FAQ</a>
+
+                 </footer>
+    
+</body>
+</html>

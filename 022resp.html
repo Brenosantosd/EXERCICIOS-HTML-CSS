@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperShop - Online Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #F5F5F5;
+        }
+
+        /* HEADER - Ajustado para alinhar o h1 à esquerda */
+        header {
+            background-color: #333333;
+            color: white;
+            padding: 40px 20px;
+            /* Removi o text-align: center daqui para controlar cada elemento */
+        }
+
+        header h1 {
+            font-size: 60px;
+            font-style: italic;
+            transform: skewY(-5deg); 
+            text-shadow: 2px 2px 2px black;
+            margin-bottom: 20px;
+            display: block; /* Garante que ele ocupe a linha toda ou respeite o alinhamento */
+            text-align: left; /* Manda o SuperShop para a esquerda */
+            margin-left: 20px; /* Pequeno recuo da borda */
+        }
+
+        header h2 {
+            font-size: 35px;
+            margin-bottom: 10px;
+            text-align: center; /* Mantém o subtítulo no centro */
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 20px;
+            color: #ccc;
+            padding-bottom: 30px;
+            text-align: center; /* Mantém a frase no centro */
+        }
+
+        /* NAVEGAÇÃO */
+        nav {
+            background-color: #444444;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 8px 20px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #666666;
+            border-radius: 5px;
+        }
+
+        .home {
+            background-color: #FF6600;
+            border-radius: 5px;
+        }
+
+        /* GRID DE PRODUTOS */
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            width: 95%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 1px 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        button {
+            background-color: #45A049;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #38863b;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #333333;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        footer a {
+            background-color: rgb(241, 223, 223);
+            color: rgb(182, 14, 14);
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 40px;
+                text-align: center; /* No celular, talvez fique melhor centralizado */
+                margin-left: 0;
+            }
+            
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SuperShop</h1>
+        <h2>Online Shop</h2>
+        <p>Quality products at affordable prices</p>
+    </header>
+
+    <nav>
+        <a href="#" class="home">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Categories</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <div class="card">
+            <h3>Smartphone</h3>
+            <p>Latest smartphone with advanced features and long battery life.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>Smart Watch</h3>
+            <p>Track your fitness and stay connected with this smart watch.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>Gaming Console</h3>
+            <p>Next-gen gaming console with 4K support and immersive gaming.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>Laptop</h3>
+            <p>Ultra-thin laptop with high performance and lightweight design.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>Camera</h3>
+            <p>Professional DSLR camera perfect for photography enthusiasts.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>Wireless Earbuds</h3>
+            <p>True wireless earbuds with premium sound and noise cancellation.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>Headphones</h3>
+            <p>Premium noise-canceling headphones with crystal clear sound.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>Tablet</h3>
+            <p>10-inch tablet with stylus support and long battery life.</p>
+            <button>add to cart</button>
+        </div>
+        <div class="card">
+            <h3>External SSD</h3>
+            <p>High-speed portable SSD with rugged design and water resistance.</p>
+            <button>add to cart</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Shipping</a>
+            <a href="#">Returns</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">FAQ</a>
+        </div>
+    </footer>
+
+</body>
+</html>
