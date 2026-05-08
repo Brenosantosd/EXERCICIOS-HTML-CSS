@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>024</title>
+<style>
+
+    *{ padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    body {  background-color: #FBF9F7;
+        
+    }
+
+    header > div { margin: 40px;
+                   border: 1px solid rgb(255, 166, 0);
+                   background-color: #F8F1E9;
+                   width: 150px;
+                   text-align: center;
+                   padding: 10px;
+                   transform: skewY(-3deg); 
+                   box-shadow: 5px 5px rgba(255, 166, 0, 0.381);
+
+    }
+
+    header > div > h2 { font-size: 30px;
+                        color: #D4A47D;
+       
+
+    }
+
+   header > h1 { text-align: center;
+                 font-size: 40px;
+    
+
+   }
+
+   nav {  background-color: #F8F1E9;
+          border: 1px solid #E8D5C4;
+          text-align: center;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          margin-top: 30px;
+          margin-left: 30px;
+          margin-right: 30px;
+          border-radius: 10px;
+
+   }
+
+   nav > a {  padding: 20px;
+
+              text-decoration: none;
+              color: black;
+              font-weight: bolder;
+                
+
+   }
+
+   .home { background-color: #D4A373;
+           color: white;
+           border-radius: 10px;
+
+   }
+
+   nav > a:hover { background-color: #E8D6C5;
+                   border-radius: 10px ;
+                   transition-duration: 0.5s;
+
+   }
+
+   .bloco-conteudo { display: flex;
+                     margin: auto;
+                     max-width: 1100px;
+                     justify-content: center;
+                     
+   }
+
+   main { display: grid;
+
+          margin-top: 50px;
+          margin-bottom: -80px;
+          width: 900px;
+         
+          
+        
+   }
+
+   .card { border: 1px solid rgba(255, 166, 0, 0.445);
+    background-color: white;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 10px;
+
+   }
+
+   .card span{ display: flex;
+               justify-content: end;
+               padding-right: 8px;
+               background-color: #F8F1E9;
+               padding: 3px;
+               border-radius: 5px;
+               
+                         
+
+   }
+
+   .card a{ font-weight: bold;
+            color: #D4A373;
+
+   }
+
+   .card a:hover{ text-decoration: underline;
+
+   }
+
+   .card:hover { box-shadow: 3px 3px  rgba(0, 0, 0, 0.3);
+                 transition-duration: 0.3s;
+
+   }
+
+   .card h2{ margin-bottom: 10px;
+             margin-top: 8px;
+
+   }
+
+      
+   
+
+   .menu { 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 300px;
+            margin: 20px;
+    
+   }
+
+    
+
+   
+
+   .menu-parte1{ border: 1px solid rgba(255, 166, 0, 0.45);
+                 background-color: white;
+                 font-size: 18px;
+                 padding: 10px;
+                 line-height: 40px;
+                 padding-right: 10px;
+                 border-radius: 10px;
+                 margin-top: 20px;
+                 
+
+   }
+
+   .menu-parte1 > a { text-decoration: none;
+                      color: black;
+                      font-weight: bold;
+                      
+
+   }
+
+   .menu-parte1 > a:hover{ background-color: #D4A373;
+                           color: #FBF9F7;
+                           transition-duration: 0.3s;
+                           border-radius: 5px;
+                           text-shadow: 1px 1px 2px black;
+                           padding-right: 50px;
+                           padding-top: 5px;
+                           padding-bottom: 5px;
+                           padding-left: 5px;
+                           font-weight: bold;
+
+   }
+
+   .menu-parte2{ border: 1px solid rgba(255, 166, 0, 0.45) ;
+                background-color: white;
+                 padding: 10px ;
+                 border-radius: 10px;
+
+   }
+
+   .menu-parte2 > p { padding-top: 10px;
+
+   }
+
+   
+
+   
+
+   
+
+   article { display: grid;
+             margin: 40px;
+             gap: 20px;
+
+  }
+    
+   .tags ul { list-style: none;
+
+   }
+
+   .tags { border: 1px solid rgba(255, 166, 0, 0.449);
+           background-color: white;
+           padding: 10px;
+           border-radius: 10px;
+
+   }
+
+   .tags h3 { border-bottom: 1px solid rgba(255, 166, 0, 0.445);
+              padding-bottom: 8px;
+    
+
+   }
+
+   .tags a { color: black;
+    
+   }
+
+   .tags a:hover { text-decoration: underline;
+
+   }
+
+   .tags h3 { text-align: center;
+
+   }
+
+   .tags ul { margin-top: 12px;
+              line-height: 30px;
+              
+              
+
+   }
+
+   .tags ul, a { text-decoration: none;
+
+   }
+
+   .Upcomingevents ul { list-style: none;
+                        margin-top: 10px;
+                        
+
+   }
+
+   .Upcomingevents h3 { border-bottom: 1px solid orange;
+                        padding-bottom: 8px;
+
+   }
+
+   .Upcomingevents { border: 1px solid rgba(255, 166, 0, 0.445);
+                     background-color: white;
+                     padding: 10px;
+                     border-radius: 10px;
+
+   }
+
+   .Newsletter { border: 1px solid rgba(255, 166, 0, 0.449);
+                 background-color: white;
+                 padding: 10px;
+                 border-radius: 10px;
+
+   }
+
+   .Newsletter h3 {  border-bottom: 1px solid  orange;
+                     padding-bottom: 8px;
+
+   }
+
+   .Newsletter p { margin-top: 10px;
+                   margin-bottom: 10px;
+
+   }
+
+   .Newsletter form { display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+
+   }
+
+   .Newsletter input,
+   .Newsletter button { padding: 5px;
+                        border-radius: 5px;
+                        border: 2px solid rgba(0, 0, 0, 0.609);
+
+   }
+
+   .Newsletter button { font-weight: bolder;
+                        color: black;
+                        background-color: #E8D6C5;
+
+   }
+
+   footer { text-align: center;
+            margin: auto;
+            margin-top: 120px;
+            background-color: #F8F1E9;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 10px;
+            width: 600px;
+            
+
+   }
+
+   footer a { color: black;
+    padding: 2px;
+
+   }
+
+   footer a:hover { text-decoration: underline;
+
+   }
+
+   
+
+
+</style>
+
+
+</head>
+
+               
+<body>
+                <header>
+                   <div>
+                    <h2>Creative</h2>
+                   <p>Express your ideas</p>
+                   </div>
+                   <h1>Creative Thoughts</h1>
+               </header>
+
+               <nav>
+                <a class="home" href="http://">Home</a>
+                <a href="http://">Articles</a>
+                <a href="http://">Inspiration</a>
+                <a href="http://">Tutorials</a>
+                <a href="http://">Community</a>
+               </nav>
+
+               <div class ="bloco-conteudo">
+
+            <div class ="menu">
+
+                <div class ="menu-parte1">
+
+                <a href="http://">Dashboard <br></a>
+                <a href="http://">Bookmarks <br></a>
+                <a href="http://">Reading List</a>
+                <a href="http://">Preferences <br></a>
+                <a href="http://">Following</a>
+
+                </div>
+
+                
+
+
+
+                <div class ="menu-parte2">
+                    <h2>Weekly Inspiration</h2>
+
+                    <p>"Creativity is intelligence having fun." - Albert Einstein. Explore new ideas every day and let your imagination flow.</p>
+
+
+
+
+                </div>
+
+
+
+
+               </div>
+              
+               <main>
+
+               <div class = "card caixa1">
+                  <span>
+                    <span class ="data">May 15, 2025</span>
+                    <span class ="autor"><a href="http://">Emma Wilson</a></span>
+                    <span class ="cargo"><a href="http://">Mindfulness</a></span>
+                    <span class ="comentarios"> <a href="http://">14 comments</a></span>
+                  </span>
+
+                     <h2>The Art of Mindful Creativity</h2>
+                     <p>Discover how mindfulness practices can enhance your creative process. Learn techniques to quiet your mind and allow ideas to flow naturally without judgment or pressure.</p>
+
+               </div>
+
+               <div class ="card caixa2">
+                  <span>
+                    <span class ="data">June 2, 2025</span>
+                    <span class ="autor"><a href="http://">James Carter</a></span>
+                    <span class ="cargo"> <a href="http://">Design</a></span>
+                    <span class ="comentarios"><a href="http://">22 comments</a></span>
+                  </span> 
+
+                    <h2>Color Theory for Beginners</h2>
+                    <p>Understanding color relationships can transform your creative projects. This guide covers the color wheel, complementary colors, and creating harmonious palettes.</p>
+
+               </div>  
+
+                  
+
+                  <div class="card caixa3">
+                    <span>
+                        <span class="data">July 10, 2025</a></span>
+                        <span class="autor"><a href="http://">Sophia Lee</a></span>
+                        <span class="cargo"><a href="http://">Productivity</a></span>
+                        <span class="comentarios"><a href="http://">18 comments</a></span>
+                    </span>    
+
+                        <h2>Overcoming Creative Block</h2>
+
+                        <p>Every creator faces blocks. Explore proven strategies to reignite your inspiration, from changing environments to creative cross-training in different mediums.</p>
+
+                 </div>
+
+
+                 <div class ="card caixa4">
+                    <span>
+                        <span class ="data">August 5, 2025</span>
+                        <span class ="autor"><a href="http://">David Chen</a></span>
+                        <span class ="cargo"><a href="http://">Technology</a></span>
+                        <span class ="comentarios"><a href="http://">9 comments</a></span>
+                    </span>   
+                        <h2>Digital Tools for Creative Minds</h2>
+                        <p>Explore the latest digital tools that can streamline your creative workflow. From AI-assisted design to collaborative platforms, discover how technology can enhance your creative process.</p>
+
+                 </div>
+
+                 </main>
+
+
+                 <article>
+
+                    <div class="tags">
+                        <h3>Popular Tags</h3>
+                        <ul>
+                            <li> <a href="http://">#creativity</a></li> 
+                            <li> <a href="http://">#design</a></li>
+                            <li> <a href="http://">#art</a></li>
+                            <li> <a href="http://">#inspiration</a></li>
+                            <li> <a href="http://">#photography</a></li>
+                            <li> <a href="http://">#writing</a></li>
+                        </ul>
+                  
+                    </div>
+
+                    <div class="Upcomingevents">
+                        <h3>Upcoming Events</h3>
+
+                        <ul>
+
+                            <li>Creative Workshop
+                                <span>- June 15</span>
+                            </li>
+
+                            <li>Design Conference
+                                <span>- July 8</span>
+                            </li>
+
+                            <li>Art Exhibition 
+                            <span>- August 3</span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class ="Newsletter">
+                        <h3>Newsletter</h3>
+
+                        <p>Subscribe for weekly creative tips and inspiration.</p>
+
+                        <form>
+                              <input type="email" placeholder="Seu email" required>
+                              <button type="submit">Subscribe</button>
+
+                        </form>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                 </article>
+
+                 
+                         
+
+
+
+
+
+
+               </div>
+
+
+               <footer>
+                 <a href="http://">About Us</a>
+                 <a href="http://">Guidelines</a>
+                 <a href="http://">Support</a>
+                 <a href="http://">Privacy</a>
+                 <a href="http://">Terms</a>
+                 <a href="http://">Cookies</a>
+               </footer>
+
+
+
+
+
+
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               </div>
+
+   
+</body>
+</html>
