@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 025</title>
+
+ <style>
+
+    * { padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    header > div { margin: 40px;
+                   border: 1px solid rgba(0, 128, 0, 0.446);
+                   width: 150px;
+                   padding: 15px;
+                   transform: skewY(-4deg);
+                   border-radius: 5px;
+                   background-color: #E8F5E9;
+                   box-shadow: 3px 3px rgba(0, 128, 0, 0.455);
+
+    }
+
+    header h2 { color: rgb(2, 69, 2);
+                font-weight: bolder;
+                padding-bottom: 5px;
+
+    }
+
+    header p {  font-size: 12px;
+                text-indent: 30px;
+                color: green;
+
+    }
+
+
+    header{ background-color: #E8F5E9;
+           padding-top: 15px;
+           padding-bottom: 20px;
+           border-bottom: 1px solid rgba(0, 128, 0, 0.455);
+
+    }
+
+    header > span { float: right;
+                    padding: 20px;
+
+    }
+
+    header a{ padding: 15px;
+              text-decoration: none;
+              color: green;
+
+    }
+
+    header a:hover { background-color: #C9E6CA;
+                     border-radius: 5px;
+                     padding-top: 7px;
+                     padding-bottom: 7px;
+                     transition-duration: 0.3s;
+
+    }
+
+    header h1 { text-align: center;
+                color: green;
+
+    }
+
+    nav{ background-color: #E8F5E9;
+         margin-top: 20px;
+         margin-bottom: 20px;
+         padding-top: 20px;
+         padding-bottom: 20px;
+         border: 1px solid rgba(0, 128, 0, 0.459);
+         border-radius: 10px;
+         
+    }
+
+    nav > span { float: right;
+                margin-right: 100px;
+                
+
+    }
+
+    nav > span > a { padding: 10px;
+                    text-decoration: none;
+                    color:#1B5E20;
+                    background-color: #FF9800;
+                    border-radius: 3px;
+                    color: white;
+
+    }
+
+    nav > a { padding: 10px;
+             margin-left: 70px;
+             color: #1B5E20;
+             text-decoration: none;                     
+    }
+
+    a#home { background-color: #81C784;
+             color: #1B5E20;
+             border-radius: 3px;
+             padding: 10px;
+             color: white;
+
+    }
+
+    nav > a:hover { background-color: #C8E6C9;
+        border-radius: 3px;
+        transition-duration: 0.5s;
+
+    }
+
+    main { display: flex;
+           max-width: 1200px;
+           margin: auto;
+
+    }
+
+    .bloco_conteudo1 { display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 20px;
+        width: 350px;
+    }
+
+    .card { padding: 10px;
+            border: 1px solid #BBE0BC;
+            border-radius: 5px;
+
+    }
+
+    .card > h2 { margin-bottom: 15px;
+                color: #1B5E20;
+
+    }
+
+    .card > p { margin-bottom: 15px;
+
+    }
+
+    .preco { font-size: 22px;
+             color: rgb(3, 81, 3);
+             font-weight: bolder;
+    }
+
+    .card > button { padding: 5px;
+                     width: 100%;
+                     background-color: #4CAF50;
+                     border: 1px solid green;
+                     border-radius: 5px;
+                     color: white;
+                     font-weight: bold;
+
+    }
+
+
+
+    .menu{ display: flex;
+        flex-direction: column;
+        border: 1px solid #BBE0BC;
+        line-height: 30px;
+
+    }
+
+    .menu a { text-decoration: none;
+              color: #1B5E20;
+              text-indent: 15px;
+              margin-top: 10px;
+
+    }
+
+    .categories { display: flex;
+        flex-direction: column;
+        border: 1px solid #BBE0BC;
+        line-height: 30px;
+        color: #1B5E20;
+
+    }
+
+    .categories a { text-decoration: none;
+        color: #1B5E20;
+        text-indent: 15px;
+        margin-top: 10px;
+
+    }
+
+    .categories > h3 { border-bottom: 1px solid #BBE0BC;
+
+    }
+
+    .SpecialOffers { display: flex;
+        flex-direction: column;
+        border: 1px solid #BBE0BC;
+        
+
+    }
+    
+    .SpecialOffers > h3 { border-bottom: 1px solid #BBE0BC;
+                          padding-bottom: 5px;
+                          color: #1B5E20;
+
+    }
+
+    .SpecialOffers > p { margin-top: 18px;
+
+    }
+
+
+    .Newsletter { display: flex;
+        flex-direction: column;
+        border: 1px solid #BBE0BC;
+
+    }
+
+    .Newsletter > h3 { border-bottom: 1px solid #BBE0BC;
+                       padding-bottom: 5px;
+                       color: #1B5E20;
+
+    }
+
+    .Newsletter > form { display: flex;
+                         flex-direction: column;
+
+
+    }
+
+    .Newsletter p { margin-top: 10px;
+
+    }
+
+    .Newsletter  input { padding: 5px;
+
+    }
+
+    .Newsletter button { padding: 5px; 
+                         margin-top: 5px;
+
+    }
+   
+     
+    .bloco_conteudo2{ display: grid;
+                      grid-template-columns: repeat(2, 1fr);
+                      margin: 30px;
+                      gap: 20px;
+
+    }
+
+    footer { display: grid;
+             grid-template-columns: repeat(4, 1fr);
+             max-width: 1100px;
+             padding-left: 400px ;
+             padding-right: 400px ;
+             padding-top: 30px;
+             margin: auto;
+             background-color: #E8F5E9;
+
+    }
+
+    
+                             
+   div#all { background-color: #E8F5E9;
+             text-align: center;
+             padding-top: 40px;
+             padding-bottom: 20px;
+
+   }
+    
+
+   
+    h4 { margin-bottom: 10px;
+
+    }
+    
+
+    .Shop{ display: flex;
+        flex-direction: column;
+        
+
+    }
+
+    .Shop > a{ text-decoration: none;
+        line-height: 30px;
+        color: #1B5E20;
+
+    }
+
+    .Information{ display: flex;
+        flex-direction: column;
+        
+
+    }
+
+    .Information > a{ text-decoration: none;
+        line-height: 30px;
+        color: #1B5E20;
+
+    }
+
+    .CustomerService{ display: flex;
+        flex-direction: column;
+
+    }
+
+    .CustomerService > a { text-decoration: none;
+        line-height: 30px;
+        color: #1B5E20;
+
+    }
+
+
+
+    .Legal{ display: flex;
+        flex-direction: column;
+
+    }
+
+    .Legal > a {text-decoration: none;
+        line-height: 30px;
+        color: #1B5E20;
+
+    }
+
+
+
+    
+
+    
+   
+
+
+
+ </style>   
+
+</head>
+<body>
+             <header>
+
+                <span>
+                    <a href="http://">Account</a>
+                    <a href="http://">Wishlist</a>
+                    <a href="http://">Cart (0)</a>
+                </span>
+
+
+
+                <div>
+                    <h2>GREENLEAF</h2>
+                    <p>ECO LIFESTYLE</p>
+                </div>
+
+               
+
+
+                <h1>GreenShop - Sustainable Products</h1>
+                
+            </header>
+
+
+                
+
+              <nav class="navegação">
+                
+                   <span>
+                    <a href="http://">Deals</a>
+                    <a href="http://">Clearance</a>
+                   </span>
+                
+                <a id ="home" href="http://">Home</a>
+                <a href="http://">Shop All</a>
+                <a href="http://">New Arrivals</a>
+                <a href="http://">Categories</a>
+                <a href="http://">Sale</a>
+                <a href="http://">About Us</a>
+                <a href="http://">Sustainability</a>
+                <a href="http://">Blog</a>
+                <a href="http://">Contact</a>
+
+
+                   
+              </nav>
+
+             <main>
+                <div class = "bloco_conteudo1">
+              <div class ="card menu">
+                <a href="http://">My Account</a>
+                <a href="http://">Wishlist</a>
+                <a href="http://">Order History</a>
+                <a href="http://">Settings</a>
+                <a href="http://">Notifications</a>
+              </div>
+
+               <div class =" card categories">
+                <h3>Categories</h3>
+                <a href="http://">Home & Garden</a>
+                <a href="http://">Kitchenware</a>
+                <a href="http://">Fashion</a>
+                <a href="http://">Beauty</a>
+                <a href="http://">Electronics</a>
+
+               </div>
+
+               <div class =" card SpecialOffers">
+                <h3>Special Offers</h3>
+                  <p>Get 15% off on all reusable products this week! Use code: GREEN15 at checkout.</p>
+
+
+
+               </div>
+
+               <div class =" card Newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get eco tips and exclusive offers!</p>
+
+                <form>
+                    <input type="email" placeholder="your email" required>
+                    <button type="submit">Subscribe</button>
+
+                </form>
+
+
+               </div>
+
+               </div>
+
+               <div class ="bloco_conteudo2">
+
+                <div class ="card bloco1">
+                    <h2>Bamboo Toothbrush Set</h2>
+                    <p>Set of 4 eco-friendly bamboo toothbrushes with charcoal bristles. 100% biodegradable.</p>
+                    <p class ="preco">$12.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class ="card bloco2">
+                    <h2>Organic Cotton Towel</h2>
+                    <p>Large bath towel made from 100% organic cotton. Soft, absorbent and chemical-free.</p>
+                    <p class ="preco">$24.99</p>
+                    <button>Add to Cart</button>
+
+                </div>
+
+                <div class ="card bloco3">
+                    <h2>Beeswax Food Wraps</h2>
+                    <p>Natural alternative to plastic wrap. Set of 3 different sizes for all your food storage needs.</p>
+                    <p class ="preco">$15.99</p>
+                    <button>Add to Cart</button>
+
+                </div>
+
+                <div class="card bloco4">
+                    <h2>Hemp Backpack</h2>
+                    <p>Stylish and durable backpack made from hemp fabric. Multiple compartments for organization.</p>
+                    <p class ="preco">$39.99</p>
+                    <button>Add to Cart</button>
+
+                </div> 
+
+                <div class ="card bloco5">
+                    <h2>Cork Yoga Mat</h2>
+                    <p>Natural cork yoga mat with non-slip surface. Eco-friendly and easy to clean.</p>
+                     <p class ="preco">$45.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class ="card bloco 6">
+                    <h2>Organic Lip Balm Set</h2>
+                    <p>Set of 3 nourishing lip balms made with organic ingredients. Comes in recyclable packaging.</p>
+                    <p class ="preco">$11.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class = "card bloco7">
+                    <h2>Reusable Shopping Bag</h2>
+                    <p>Sturdy cotton shopping bag with reinforced handles. Folds compactly for easy carrying.</p>
+                    <p class ="preco">$8.49</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class = "card bloco8">
+                    <h2>Stainless Steel Straws</h2>
+                    <p>Set of 6 stainless steel straws with cleaning brush. Say no to plastic straws!</p>
+                    <p class ="preco">$9.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class = "card bloco9">
+                    <h2>Wooden Kitchen Utensils</h2>
+                    <p>Set of 6 stainless steel straws with cleaning brush. Say no to plastic straws!</p>
+                    <p class ="preco">$9.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class = "card bloco10">
+                    <h2>Solar Powered Charger</h2>
+                    <p>Portable solar charger for your devices. Perfect for camping and outdoor activities.</p>
+                    <p class = "preco">$29.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+
+                <div class = "card bloco11">
+                    <h2>Glass Storage Containers</h2>
+                    <p>Set of 6 glass food containers with bamboo lids. Microwave and oven safe.</p>
+                    <p class = "preco">$32.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+                <div class = "card bloco12">
+                    <h2>Bamboo Cutting Board</h2>
+                    <p>Premium bamboo cutting board with juice groove. Naturally antibacterial and durable.</p>
+                    <p class = "preco">$22.99</p>
+                    <button>Add to Cart</button>
+                </div>
+
+               </div>
+
+              </main>
+
+              <footer>
+                <div class ="Shop">
+                    <h4>Shop</h4>
+                    <a href="http://">All Products</a>
+                    <a href="http://">New Arrivals</a>
+                    <a href="http://">Best Sellers</a>
+                    <a href="http://">Sale Items</a>
+                </div>
+
+                <div class ="Information">
+                    <h4>Information</h4>
+                    <a href="http://">About Us</a>
+                    <a href="http://">Sustainability</a>
+                    <a href="http://">Shipping Policy</a>
+                    <a href="http://">Returns</a>
+                </div>
+
+                <div class = "CustomerService">
+                    <h4>Customer Service</h4>
+                    <a href="http://">Contact Us</a>
+                    <a href="http://">FAQs</a>
+                    <a href="http://">Size Guide</a>
+                    <a href="http://">Track Order</a>
+                </div>
+
+                <div class = "Legal">
+                    <h4>Legal</h4>
+                    <a href="http://">Privacy Policy</a>
+                    <a href="http://">Terms of Service</a>
+                    <a href="http://">Cookie Policy</a>
+                    <a href="http://">GDPR</a>
+                </div>
+
+
+              </footer>
+            
+            
+            <div id ="all">
+              <p>2025 © GreenLeaf - Eco Friendly Living. All rights reserved.</p>
+            </div> 
+           
+
+
+   
+</body>
+</html>
